@@ -84,3 +84,10 @@ button:active{
     background-color: #daa514;    /* Fallback color while image loads */
     height: 100vh;                /* Gives the container height so the image shows */
 }
+
+.menu-item{
+    border-radius: 10px;
+    border: 5px solid #daa514;
+    padding: 15px;
+    background-color: rgb(252, 209, 156);
+}
