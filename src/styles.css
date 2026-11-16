@@ -1,3 +1,86 @@
+/*Start of css reset*/
+/* 1. Use a more intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin on most elements */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Improve text rendering and set accessible line-height */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Make media responsive by default */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 6. Avoid text overflows and improve wrapping */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+/*End of css reset*/
+
 body{
-    background-color: aquamarine;
+    margin: 0;
+    min-height: 100dvh;
+    color: #fafafa;
+}
+
+button{
+    color: #fafafa;
+    background-color: #daa514;
+    border: none;
+    font-size: 12px;
+    border-radius: 25px;
+    padding: 12px;
+    margin-right: 10px;
+
+    /* Smooth easing curve for natural motion */
+    transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
+                font-size 0.25s ease,
+                background-color 0.25s ease;
+}
+button:hover{
+    background-color: #c99813;
+    font-size: 15px;
+    transform: translateY(-3px);
+    transform: translateX(3px);
+    
+}
+button:active{
+    background-color: #daa514;
+    font-size: 15px;
+    transform: translateY(0);
+    transform: translateX(0);
+}
+
+
+.nugget-cave-background{
+    background-image: url(../nugget_cave.jpg);
+    background-size: cover;       /* Scales the image to fill the container */
+    background-position: top;  /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-color: #daa514;    /* Fallback color while image loads */
+    height: 100vh;                /* Gives the container height so the image shows */
 }

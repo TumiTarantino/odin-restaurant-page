@@ -28,3 +28,5 @@ Steps:
 9: Run npm install --save-dev style-loader css-loader, css-loader reads imported css files and stores the result in a string, style-loader uses that string and adds js code to apply those styles to the page
 
 9.1: Create src/styles.css and import it in index.js
+
+10: Style your html and css as you would
