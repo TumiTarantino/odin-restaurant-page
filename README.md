@@ -23,3 +23,8 @@ Steps:
 
 0.1: Edit webpack.config.js, to include the source map in the devtool as well as set watchfiles to the template.html
 
+0.2: Run npx webpack serve, if it works, a port on port 8080 should be open
+
+9: Run npm install --save-dev style-loader css-loader, css-loader reads imported css files and stores the result in a string, style-loader uses that string and adds js code to apply those styles to the page
+
+9.1: Create src/styles.css and import it in index.js
