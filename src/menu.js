@@ -1,5 +1,5 @@
 const menuContainer = document.createElement("div");
-menuContainer.id = "menu-item";
+menuContainer.id = "menu";
 
 for(let i = 0; i < 4;i++){
     const menuItem = document.createElement("div");

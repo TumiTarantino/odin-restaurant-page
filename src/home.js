@@ -1,7 +1,7 @@
 //I guess i'll use this as the template for the home page?
 
 const homeContainer = document.createElement("div");
-homeContainer.id = "menu-item";
+homeContainer.id = "home";
 
 const h1HomeHeader = document.createElement("h1");
 h1HomeHeader.textContent = "The Nugget Cave";

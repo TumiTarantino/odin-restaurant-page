@@ -29,4 +29,6 @@ Steps:
 
 9.1: Create src/styles.css and import it in index.js
 
-10: Style your html and css as you would
+10: Style your html and css as you would;
+
+11: Dynamically create your html and separately the different pages into separate js modules and import them into the index.js
