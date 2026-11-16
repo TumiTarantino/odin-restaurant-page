@@ -15,3 +15,11 @@ Steps:
 
 6: Create webpack.config.js in the root directory
 
+7: Run npm install --save-dev html-webpack-plugin, this allows html to be bundled
+
+8: Edit webpack.config.js to add the html-webpack-plugin
+
+0: Run npm install --save-dev webpack-dev-server, this is similar to live preview, it is a QOL that reduces the time spent running npx webpack
+
+0.1: Edit webpack.config.js, to include the source map in the devtool as well as set watchfiles to the template.html
+
