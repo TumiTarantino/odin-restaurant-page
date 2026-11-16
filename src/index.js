@@ -1,12 +1,12 @@
 import "./styles.css";
-import { homeContainer } from "./home.js";
-import { menuContainer } from "./menu.js";
-import { aboutContainer } from "./about.js";
+import { createHomePage } from "./home.js";
+import { createMenuItems } from "./menu.js";
+import { createAboutPage } from "./about.js";
 
 console.log("Hi there, i ammm.....");
 
 const content = document.querySelector("#content");
-content.append(homeContainer);
+content.append(createHomePage());
 //content.append(menuContainer);
 //content.append(aboutContainer);
 // this works, but the home container is last in the DOM, i guess this is because the rest of the html hasnt been made into js, so it loads first and exists first in the dom FIXED
@@ -19,15 +19,15 @@ const aboutBtn = document.querySelector("#about-btn");
 
 homeBtn.addEventListener("click",() => {
     content.replaceChildren();
-    content.append(homeContainer);
+    content.append(createHomePage());
 })
 
 menuBtn.addEventListener("click",() => {
     content.replaceChildren();
-    content.append(menuContainer);
+    content.append(createMenuItems());
 })
 
 aboutBtn.addEventListener("click",() => {
     content.replaceChildren();
-    content.append(aboutContainer);
+    content.append(createAboutPage());
 })

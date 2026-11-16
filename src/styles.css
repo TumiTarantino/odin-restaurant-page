@@ -59,21 +59,18 @@ button{
     /* Smooth easing curve for natural motion */
     transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), 
                 box-shadow 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
-                font-size 0.25s ease,
                 background-color 0.25s ease;
 }
 button:hover{
-    background-color: #c99813;
-    font-size: 15px;
-    transform: translateY(-3px);
-    transform: translateX(3px);
+    color: #daa514;
+    background-color: #fafafa;
+    transform: translate(3px, -3px);
     
 }
 button:active{
-    background-color: #daa514;
-    font-size: 15px;
-    transform: translateY(0);
-    transform: translateX(0);
+    background-color: #daa514b9;
+    color: #fafafa;
+    transform: translate(0,0);
 }
 
 
