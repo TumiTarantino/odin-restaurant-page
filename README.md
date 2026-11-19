@@ -32,3 +32,5 @@ Steps:
 10: Style your html and css as you would;
 
 11: Dynamically create your html and separately the different pages into separate js modules and import them into the index.js
+
+12: Run npm --save-dev html-loader and update webpack.config.js to use images in html

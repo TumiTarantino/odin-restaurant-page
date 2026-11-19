@@ -1,5 +1,3 @@
-
-
 function createMenuItems(number=4){
     const menuContainer = document.createElement("div");
     menuContainer.id = "menu";

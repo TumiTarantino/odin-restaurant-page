@@ -1,8 +1,11 @@
-//I guess i'll use this as the template for the home page?
+//mport nuggetImage from "../KG2Nugget.webp";
 
 function createHomePage() {
     const homeContainer = document.createElement("div");
     homeContainer.id = "home";
+
+    //const nuggetImg = document.createElement("img");
+    //nuggetImg.src = nuggetImage;
 
     const h1HomeHeader = document.createElement("h1");
     h1HomeHeader.textContent = "The Nugget Cave";
