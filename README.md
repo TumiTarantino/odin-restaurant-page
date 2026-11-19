@@ -1,36 +1,117 @@
-# odin-restaurant-page
+odin-restaurant-page
+
 The Odin Project Full Stack JavaScript: Restaurant Page
 
-Steps:
+Setup and Development
 
-1: Run npm init -y --init-type=module, this creates a package.json
+Run npm init -y --init-type=module. This creates a package.json with ES module support.
 
-2: Create a gitignore and add node_modules,dist on separate lines
+Create a .gitignore and add node_modules and dist on separate lines.
 
-3: Run --save-dev webpack webpack-cli, this installs webpack as well as its command line interface
+Run npm install --save-dev webpack webpack-cli. This installs Webpack and its command-line interface.
 
-4: Create the src and dist directories on the main directory
+Create the src directory in the project root. Webpack will generate the dist directory when building.
 
-5: Create the index.html and index.js(no dependancies created yet), in the src directory
+Create src/template.html and src/index.js.
 
-6: Create webpack.config.js in the root directory
+Create webpack.config.js in the project root.
 
-7: Run npm install --save-dev html-webpack-plugin, this allows html to be bundled
+Run npm install --save-dev html-webpack-plugin. This allows Webpack to generate the HTML file and inject the bundled JavaScript.
 
-8: Edit webpack.config.js to add the html-webpack-plugin
+Edit webpack.config.js to configure html-webpack-plugin.
 
-0: Run npm install --save-dev webpack-dev-server, this is similar to live preview, it is a QOL that reduces the time spent running npx webpack
+Run npm install --save-dev webpack-dev-server. This provides a development server and automatically rebuilds when files change.
 
-0.1: Edit webpack.config.js, to include the source map in the devtool as well as set watchfiles to the template.html
+Edit webpack.config.js to include source maps through devtool and configure watchFiles to watch src/template.html.
 
-0.2: Run npx webpack serve, if it works, a port on port 8080 should be open
+Run npx webpack serve. If everything works, the development server should be available at http://localhost:8080.
 
-9: Run npm install --save-dev style-loader css-loader, css-loader reads imported css files and stores the result in a string, style-loader uses that string and adds js code to apply those styles to the page
+Run npm install --save-dev style-loader css-loader. css-loader processes imported CSS files and their dependencies; style-loader injects the processed CSS into the page.
 
-9.1: Create src/styles.css and import it in index.js
+Create src/styles.css and import it into index.js.
 
-10: Style your html and css as you would;
+Style your HTML and CSS as desired.
 
-11: Dynamically create your html and separately the different pages into separate js modules and import them into the index.js
+Dynamically generate the homepage and separate pages using JavaScript modules. Import these modules into index.js.
 
-12: Run npm --save-dev html-loader and update webpack.config.js to use images in html
+If you want to reference local images from HTML files, install and configure html-loader. For images imported directly into JavaScript or CSS, configure Webpack's asset modules instead.
+
+Deployment (GitHub Pages)
+
+Make sure all your source code changes are committed and pushed to main.
+
+Create a deployment branch. This only needs to be done once:
+
+git branch gh-pages
+
+Switch to the deployment branch and merge the latest changes from main:
+
+git checkout gh-pages
+git merge main --no-edit
+
+Build the production files:
+
+npx webpack
+
+Force-add the generated dist directory and commit it:
+
+git add dist -f
+git commit -m "Deployment commit"
+
+Push the contents of dist to the root of the remote gh-pages branch:
+
+git subtree push --prefix dist origin gh-pages
+
+Return to the main branch:
+
+git checkout main
+
+On GitHub, open your repository's Settings → Pages.
+
+Under Build and deployment, select:
+
+Source: Deploy from a branch
+
+Branch: gh-pages
+
+Folder: / (root)
+
+Save the settings. GitHub Pages will publish your website.
+
+Your website should be available at:
+
+https://<username>.github.io/<repository-name>/
+
+Redeploying After Changes
+
+Whenever you make changes to your project:
+
+Commit and push your source changes to main.
+
+Switch to gh-pages and merge main.
+
+Build the project with npx webpack.
+
+Add and commit the generated dist directory.
+
+Push the updated build with git subtree push.
+
+Return to main.
+
+Commands:
+
+git add .
+git commit -m "Update restaurant page"
+git push
+
+git checkout gh-pages
+git merge main --no-edit
+
+npx webpack
+
+git add dist -f
+git commit -m "Deployment commit"
+
+git subtree push --prefix dist origin gh-pages
+
+git checkout main
